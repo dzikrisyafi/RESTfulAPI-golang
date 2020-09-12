@@ -26,7 +26,7 @@ func GetNPM(r *http.Request) string {
 	reg := regexp.MustCompile(`([a-z0-9]+)`)
 	g := reg.FindAllString(r.URL.Path, -1)
 	return g[len(g)-1]
-}
+} 
 
 func (h *mahasiswaHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
